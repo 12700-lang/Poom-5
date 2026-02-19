@@ -1,25 +1,33 @@
-.flexbox {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-    margin-left: -10px;
-    margin-right: -10px;
+.grid{
+display: grid;
+grid-template-columns: 300px auto;
+grid-template-rows: 100px minmax(250px, auto) 200px;
+grid-template-areas:
+'header header'
+'leftbar main'
+'footer footer';
 }
 
-.item {
-    display: block;
-    box-sizing: border-box;
-    width: 33.33%;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
+.page-header {
+grid-area: header;
 }
+
+.page-leftbar {
+grid-area: leftbar;
+}
+
+.page-main {
+grid-area: main;
+}
+
+.page-footer{
+grid-area: footer;
+}
+
 
 .content {
-    background-color: rgb(240,209,73);
-    border: 2px solid black;
-    padding: 16px;
+background-color:gold;
+border: 2px solid  black;
+box-sizing: border-box;
+padding: 10px;
 }
